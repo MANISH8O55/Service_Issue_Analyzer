@@ -38,7 +38,7 @@ def matches_query(issue, query):
     return query in searchable_text
 
 # Load data
-data = load_data()
+data = load_json()
 
 # Header
 st.markdown("## 🔍 My Bell Issue Analyzer")

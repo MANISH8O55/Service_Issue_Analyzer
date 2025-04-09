@@ -7,7 +7,7 @@ st.set_page_config(layout="wide", page_title="My Bell Issue Analyzer")
 
 # Load JSON data
 def load_data():
-    json_file_path = r"D:\Service portal\knowledge portal\Mybell_Resolutions.json"
+    json_file_path = r"Mybell_Resolutions.json"
     if not os.path.exists(json_file_path):
         st.error(f"File not found: {json_file_path}")
         return []

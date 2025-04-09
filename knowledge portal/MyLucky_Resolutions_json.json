@@ -1,0 +1,212 @@
+[
+ 
+   
+  {
+    "IssueName": "Mobility Overview Page Loading error",
+    "Functionality": "Mobility Overview",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Overview Page Loading error",
+        "TriagingSteps": [
+		  "check if NGCC lab is up and running or not with our ESB team",
+          "Try to Reproduce the issue and see was there any API failing in Dev Tool.",
+          "If all API calls are failing with CORS error or 599 as response code then check the health of the SG servers. Reboot the servers and test the flow.",
+          "Try to check the trace using DTM/Dynatrace and see if anything can be traceble.",
+          "Try checking the flow with diffrent profile and see if the issue still reproducible.",
+          "Try Enabling the Fiddler Trace and see if any  calls are failing and we can Provide the RR to our ESB team to raise the UTS or ALM .",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug.",
+          "If usage section is not loading in Overview then check the logs for usage api and we can enable the trace for the same to capture the trace."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Change Rateplan error",
+    "Functionality": "Mobility Change Rate Plan",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Change Rateplan error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue and see was there any API(ordering or Service account)failing in Dev tool.",
+          "If API's are failing with CORS errors then try to check the server health and try reseting the IIS and SOSS cache. this should fix the Cors issue.",
+          "Check in DTM/Dynatrace and search if anything can be traceable. ",
+          "If any service or api is failing then check application Logs for the failed API in respective servers.",
+          "verify the 'retrieveAvailableServices' call in DTM or application Logs and see if this is responding properly. If the mentioned Nm1 service throwing error then inform our ESB to raise UTS with NM1 team.",
+          "If nothing found in DTM or Logs then capture Fiddler trace.",
+          "check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Change Feature flow error",
+    "Functionality": "Mobility Change Feature",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Change Feature flow error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue and see was there any API(ordering or Service account)failing in Dev tool.",
+          "If API's are failing with CORS errors then try to check the server health and try reseting the IIS and SOSS cache. this should fix the Cors issue.",
+          "Check in DTM/Dynatrace and search if anything can be traceable. ",
+          "If any service or api is failing then check application Logs for the failed API in respective servers.",
+          "If nothing found in DTM or Logs then capture Fiddler trace and provide the failed Trace to ESB team to raise the UTS defects with nm1 team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  
+  {
+    "IssueName": "Mobility MyProfile Edit error",
+    "Functionality": "Mobility MyProfile Edit",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility MyProfile Edit error",
+        "TriagingSteps": [
+          "Try to reproduce the issue with diffrent profile and see if the issue is reproducible.",
+          "If the fow worked fine with diffrent profile then its a data issue.",
+          "If we are getting same error for multiple profiles/data then try to check the Dev tool and see which call is failing.",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Check the application logs for failed API/Service from Dev tool and see if anything can be traceble",
+          "Based on the logs if you feel issue with some backend then try to enable the trace.",
+          "If you suspect this culd be code issue then check with Our CCA with logs and provide the change set details with tcoe to raise IT-DCX bug with respective projects."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Edit Marketing Preference error",
+    "Functionality": "Mobility MyProfile Edit",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Edit Marketing Preference error",
+        "TriagingSteps": [
+          "First check with TCOE team if this data seeded in CPM backend or not.",
+          "Try to reproduce the issue with diffrent profile(seeded in CPM backend) and see if the issue is reproducible.",
+          "If the fow worked fine with diffrent profile then its a data issue.",
+          "If we are getting same error for multiple profiles/data then try to check the Dev tool and see which call is failing.",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Check the application logs for failed API/Service from Dev tool and see if anything can be traceble",
+          "Based on the logs if you feel issue with some backend then try to enable the trace.",
+          "If you suspect this culd be code issue then check with Our CCA with logs and provide the change set details with tcoe to raise IT-DCX bug with respective projects."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility BAN Registration failure",
+    "Functionality": "Mobility Registration",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility BAN Registration failure",
+        "TriagingSteps": [
+          "Check the flow with other data and see if the flow is working fine.",
+          "Check if the recaptcha is enabled in your machine where you're testing the flow(recaptha should be enabled for all registration call).",
+          "Check the registartion service logs ",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Try to enable the Trace in WFE and see which calls are failing or throwing the errors.if failing ask our ESB team to verify with BRS or Nm1 Team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug"
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Unlock Device error",
+    "Functionality": "Mobility Registration",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Unlock Device error",
+        "TriagingSteps": [
+          "Try to reproduce the issue and see was there any API(ordering or Service account)failing in Dev tool.",
+          "Try to check the trace using DTM/Dynatrace and see if anything can be traceble.",
+          "Try to check the flow with diffrent Profiles or Diffrent IMEI numbers. Sometime We wil be having issues with IMEI Numbers.",
+          "Try Enabling the Fiddler Trace and see if any Nm1 calls are failing. Specially related with Validating IMEI numbers.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Add/Remove Add-ons error",
+    "Functionality": "Mobility Change Feature",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Add/Remove Add-ons error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue and see was there any API(ordering or Service account)failing in Dev tool.",
+          "If API's are failing with CORS errors then try to check the server health and try reseting the IIS and SOSS cache. this should fix the Cors issue.",
+          "Check in DTM/Dynatrace and search if anything can be traceable. ",
+          "If any service or api is failing then check application Logs for the failed API in respective servers.",
+          "If nothing found in DTM or Logs then capture Fiddler trace and provide the failed Trace to ESB team to raise the UTS defects with nm1 team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Pre-authorize Payment error",
+    "Functionality": "Pre-Authorized Payment",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "Pre-authorize Payment error using Credit card",
+        "TriagingSteps": [
+          "Verify the DTM dashboard and see if GPS or DTS backend are up or not.",
+          "Check with ESB team and ask them confirm about the GPS and DTS backend configurations.",
+          "Try to reproduce the issue with diffrent credit card .",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Try to enable the trace in WFE and see if GPS call is getting passed or not. if failing ask our ESB team to verify with GPS team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the IT_DCX bug."
+        ]
+      },
+      {
+        "DueTo": "Pre-authorize Payment error using Bank Details",
+        "TriagingSteps": [
+          "Verify the DTM dashboard and see if GPS or DTS backend are up or not.",
+          "Check with ESB team and ask them confirm about the GPS and DTS backend configurations.",
+          "Try to reproduce the issue with diffrent bank details.",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Try to enable the trace in WFE and see if GPS call is getting passed or not. if failing ask our ESB team to verify with GPS team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the IT_DCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "OTCC Payment error",
+    "Functionality": "OTCC Payment",
+    "Area": "Lucky",
+    "LOB": "lucky Mobility PrePaid",
+    "Resolutions": [
+      {
+        "DueTo": "OTCC Payment error",
+        "TriagingSteps": [
+          "Verify the DTM dashboard and see if GPS or DTS backend are up or not.",
+          "Check with ESB team and ask them confirm about the GPS and DTS backend configurations.",
+          "Try to reproduce the issue with diffrent credit card details.",
+          "Check in DTM/Dynatrace and search if anything can be traceable.",
+          "Try to enable the trace in WFE and see if GPS call is getting passed or not. if failing ask our ESB team to verify with GPS team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  }
+  
+]

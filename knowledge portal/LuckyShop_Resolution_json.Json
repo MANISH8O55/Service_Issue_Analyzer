@@ -1,0 +1,75 @@
+[
+  {
+    "IssueName": "Lucky Shop Mobility error",
+    "Functionality": "Lucky Shop Mobility",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop",
+    "Resolutions": [
+      {
+        "DueTo": "Lucky Shop Mobility error",
+        "TriagingSteps": [
+          "Reproduce the issue more than twice and see if this is  an intermitent issue",
+		  "if the flows fails intermintently then try to stop the one WFE server and test the flow. with this we can find out which server is faulty",
+		  "Try to Compare the content and code between wfe servers and see why the flow fails intermintently",
+		  "If the flow is failing throughout then check logs for LM shop in WFE and Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Lucky Shop Overview error",
+    "Functionality": "Lucky Shop Overview",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop",
+    "Resolutions": [
+      {
+        "DueTo": "Lucky Shop Overview error",
+        "TriagingSteps": [
+          "Reproduce the issue more than twice and see if this is  an intermitent issue",
+		  "if the flows fails intermintently then try to stop the one WFE server and test the flow. with this we can find out which server is faulty",
+		  "Try to Compare the content and code between wfe servers and see why the flow fails intermintently",
+		  "If the flow is failing throughout then check logs for LM shop in WFE and Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+
+      }
+    ]
+  },
+  {
+    "IssueName": "Lucky Shop SIM & Phones error",
+    "Functionality": "Lucky Shop SIM & Phones",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop",
+    "Resolutions": [
+      {
+        "DueTo": "Lucky Shop SIM & Phones error",
+        "TriagingSteps": [
+          "Reproduce the issue more than twice and see if this is  an intermitent issue",
+		  "if the flows fails intermintently then try to stop the one WFE server and test the flow. with this we can find out which server is faulty",
+		  "Try to Compare the content and code between wfe servers and see why the flow fails intermintently",
+		  "Check if PDM content is depolyed or not. if not deployed then request TFS team to deploy and retest"
+		  "If the flow is failing throughout then check logs for LM shop in WFE and Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Lucky Shop Plans & Add-Ons error",
+    "Functionality": "Lucky Shop Plans & Add-Ons",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop",
+    "Resolutions": [
+      {
+        "DueTo": "Lucky Shop Plans & Add-Ons error",
+        "TriagingSteps": [
+          "Reproduce the issue more than twice and see if this is  an intermitent issue",
+		  "if the flows fails intermintently then try to stop the one WFE server and test the flow. with this we can find out which server is faulty",
+		  "Try to Compare the content and code between wfe servers and see why the flow fails intermintently",
+		  "Check if PDM content is depolyed or not. if not deployed then request TFS team to deploy and retest"
+		  "If the flow is failing throughout then check logs for LM shop in WFE and Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  }
+  
+ ]
+  

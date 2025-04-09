@@ -1,0 +1,308 @@
+[
+{
+  "IssueName": "Shop Connected Car loading error",
+  "Functionality": "Connected Car",
+  "Area": "Bell Shop",
+  "LOB": "Connect Car Prepaid and Postpaid",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Connected Car loading error",
+      "TriagingSteps": [
+         "Check DTM/Dynatrace and see if anything is getting failed",
+        "Try to test the flow with diffrrent Data (most of the Connected car issues are related with data seeding and always works with right data)",
+        "Check the dev tool and see which api is failing. try checking the logs ",
+        "If activation api failing then check for logs and we will get the Nm1 RR . Request ESB team to raise UTS with nm1 with Nm1 RR"
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Address Qualification issue",
+  "Functionality": "Shop Qualification",
+  "Area": "Bell Shop",
+  "LOB": "Shop Address Qualification issue",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Address Qualification issue",
+      "TriagingSteps": [
+         "Verify DTM/Dynatrace if Qualification is failing?",
+         "Try reproducing the issue in any other environments and see if the issue is still exist?",
+         "Check if fiddler proxy is present/enabled in the Shop web config? If present/enabled, the Qualification calls usually fail",
+         "If no proxy is present then try to check the logs and see if error is logged with respect to Qualification calls",
+         "Enable Dev tool, if LMS is responding without error (ReCaptcha should be enabled)",
+         "If issue still exists, try to capture R&R by clearing SOSS and enabling fiddler",
+		  "Check and ensure the address used for qualification is appropriate for that backend. Try validate the address qualification with some different address.",
+        "Check and ensure OMF/LMS backend is up and responding. Try sending sample R/R payload from ESB and ensure a response from BRS backend.",
+        "Check and ensure proper BRS ELF is configured in ESB instance.",
+        "Try capture the failing services/operations from Fiddler and create an ALM ticket for BRS if needed.",
+        "Check for any code changes from any project in shop area which may impact the qualification flow.",
+        "If its a BRS release check if any BRS schema changes impact the flow as the corresponding DCX changes has not been taken care."
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Landing Page loading error",
+  "Functionality": "Shop Overview",
+  "Area": "Bell Shop",
+  "LOB": "Shop Landing Page loading error",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Landing Page loading error",
+      "TriagingSteps": [
+         "If you are getting 404 error when launching the URL then we need to check beow mentioned steps",
+         "First Check is IIS created properly or not(compare with Previous SFT  env or current SFT (if issue in DIT))",
+         "Check when was the last code/content deployed on these envs. if the code/content deployment is very old(more than 20 days) then ask tfs team to deploy the code /content.",
+         "Check is there any issue with PDM service and also check its deployment status(it should be refreshed with fresh code)",
+         "If all above steps are good then check with TFS team about any recent changes pushed to SHop application by any project/ projct team(if it is a DIT env). if pushed then ask tcoe/requester to check with that project by raising ITSM(applies only to DIT) and for SFT we should reach CCA and get their inputs and requset the requeter to raise ITSM with project teams."
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Landing Page loading error",
+  "Functionality": "Shop Overview",
+  "Area": "Bell Shop",
+  "LOB": "Shop Landing Page loading error",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Landing Page loading error",
+      "TriagingSteps": [
+        "If you are getting 500 error then we need to check below mentioned steps",
+        "If you are getting 500 error(in black color font) then this is siteminder error. We need to check the eventviewer for more info. if siteminder is down then we need  to send email to siteminder team.",
+		"If you are getting error (like not able to load the config file) then try to reboot the server once and reproduce the issue",
+        "If you're getting 500 with Red color font then reboot the server. if issue still persists even after system reboot then check event logs also check the Application logs",
+		"Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Aliant flow redirection issue",
+  "Functionality": "Shop Aliant",
+  "Area": "Bell Shop",
+  "LOB": "Shop Aliant flow redirection issue",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Aliant flow redirection issue",
+      "TriagingSteps": [
+        "The issue is commonly seen when we test with wrong address (refer to the previous TFS tickets  in TFS tool for correct Address)",
+		"Check the endpoint configurations fro bell aliant flows in shop config",
+        "If error is seen still with correct address (worked earlier in any release) and configuration is good then send email to Aliant team requesting to fix the issue"
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Device Buy Flow error",
+  "Functionality": "Shop Mobility",
+  "Area": "Bell Shop",
+  "LOB": "Mobility",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Device Buy Flow error",
+      "TriagingSteps": [
+        "If the Devices page throwing 404 error then check for PDM content.also ensure these deployed recently. ",
+        "If you're getting error during Solution builder page  then check for DOF backend calls in Dev tools. if you see some issues then Ask ESB     team to raise ALM",
+        "If you don't see any issues with DOF backend then check in DTM and see if anything can be traceble.",
+        "Check for application logs if you dont get anything in DTM.",
+        "Try to enable the Fiddler and check for traffic and provide the RR to ESB team to take ot further.",
+		"Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Checkout Failure",
+  "Functionality": "Shop BRS",
+  "Area": "Bell Shop",
+  "LOB": "Mobility,Internet,TV,Homephone",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Checkout Failure",
+      "TriagingSteps": [
+         "Check DTM/Dynatrace and see if anything is getting failed .",
+         "Check is there any issue with DTS/GPS backend and ask our ESB team to confirm about the Configurations",
+         "Check for Passkey and DTS call in dev tool and see if any issue in the response. if you see some errors in response then send email to DTS team.",
+         "Try to put fiddler trace in shop application and see if any calls are failing with DTS/GPS or any BRS related calls.",
+         "Check if the requester using the proper Credit card details or not. please use the right one to test the flow",
+         "If passkey api is failing then check the shop payment api logs in SG server or enable the trace in shop payment api.",
+		 "Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+
+      ]
+    }
+	]},
+{
+  "IssueName": "Shop Solution builder failure",
+  "Functionality": "Shop Mobility",
+  "Area": "Bell Shop",
+  "LOB": "Mobility",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Solution builder failure",
+      "TriagingSteps": [
+         "if you're getting error during Solution builder page  then check for DOF backend calls in Dev tools. if you see some issues with DOF calls then Ask ESB team to raise ALM with DOF team.",
+         "If you don't see any issues with DOF backend then check in DTM and see if anything can be traceble.",
+         "Check for application logs if you dont get anything in DTM.",
+         "Try to enable the Fiddler and check for traffic and provide the RR to ESB team to take it further.",
+		 "Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+
+
+      ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Accessories availability Error",
+  "Functionality": "Shop Accessories",
+  "Area": "Bell Shop",
+  "LOB": "Mobility",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Accessories availability Error",
+      "TriagingSteps": [
+        "Check DTM/Dynatrace and see if anything is getting failed",
+        "Always try to check in other environments if the issue is reproducible?.",
+        "Enable dev tool try to reproduce the issue and check if any issue is seen in Console or Network tab",
+        "Open Omni-Inventory Api web config and see the Hybris configurations (as mentioned in SS farm). If there is configuration mismatch, then update the config entries with right entries and retest the flow (this should fix the issue). Make sure to get the configurations updated in uDeploy",
+        "If still issue persists check Omni-Inventory Api logs in SG server and verify if any issue is seen with Hybris calls",
+        "If any issue found with Hybris backend, send email to OneView (OV) team or copying Hybris team to fix the issue",
+        "Note: Don’t approach ESB team for Hybris issue"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Billing & Shipping Issue",
+  "Functionality": "Shop BRS",
+  "Area": "Bell Shop",
+  "LOB": "Mobility,Internet,TV,Home Phone",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Billing & Shipping Issue",
+      "TriagingSteps": [
+        "Verify DTM/Dynatrace for any issue/maintenance with DTS backend?",
+        "Verify DTM/Dynatrace if any other backends are failing?",
+        "Check logs of Shop application",
+        "Enable fiddler proxy in Shop application and capture R&R. In case of any failed response, provide failed R&R to ESB to create tickets",
+		"Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Bundle Loading error",
+  "Functionality": "Shop Bundle",
+  "Area": "Bell Shop",
+  "LOB": "Mobility,Internet,TV,Home Phone",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Bundle Loading error",
+      "TriagingSteps": [
+        "Verify DTM/Dynatrace session and see if any issue is seen with backends/flows",
+        "Try to reproduce the flow in different environments and with different addresses",
+        "Check how many LOB's (Line of Business are being selected). Based on the selected LOB's, verify the relevant Shop logs for any failures",
+        "Try capturing R&R by enabling the fiddler (make sure to clear SOSS and reset IIS if needed) and pass on the failed R&R to ESB to create ticket",
+        "Refer to previous tickets to quicker resolutions",
+		"Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Order Submission error",
+  "Functionality": "Shop BRS",
+  "Area": "Bell Shop",
+  "LOB": "Mobility,Internet,TV,Home Phone",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Order Submission error",
+      "TriagingSteps": [
+        "Check DTM/Dynatrace and see if anything is getting failed",
+        "Go thourgh the shop logs and see if any logs generated for order submission flow ",
+        "If nothing found , enable the trace and see if ordersubmission or SAP related calls response. if you found some issues with these backends then ask ESB to raise ALM or UTS.",
+		"Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Payment flow error",
+  "Functionality": "Shop BRS",
+  "Area": "Bell Shop",
+  "LOB": "Mobility,Internet,TV,Home Phone",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Payment flow error",
+      "TriagingSteps": [
+       "Check DTM/Dynatrace and see if anything is getting failed .",
+       "Check is there any issue with DTS/GPS backend and ask our ESB team to confirm about the Configurations",
+       "Check for Passkey and DTS call in dev tool and see if any issue in the response. if you see some errors in response then send email to DTS team.",
+       "Try to put fiddler trace in shop application and see if any calls are failing with DTS/GPS or any BRS related calls.",
+       "Check if the requester using the proper Credit card details or not. please use the right one to test the flow",
+       "If passkey api is failing then check the shop payment api logs in SG server or enable the trace in shop payment api.",
+	   "Try checking the TFS histroy and see if any project made changes to shop recently which impacted this error and Provide your analysis to our CCA team and based on their suggestion we can ask our TCOE team to raise ITSM with that project team"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Shop Promo code Validation error",
+  "Functionality": "Shop BRS",
+  "Area": "Bell Shop",
+  "LOB": "Shop BRS",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Promo code Validation error",
+      "TriagingSteps": [
+       "Verify the endpoint for promo code in shop config.",
+       "Check DTM/Dynatrace and see if anything is getting failed .",
+	   "Try to reproduce the below FLow in previous or other enviornments and see if that given promo code works",
+	   "Ask our APIGW team and ask them validate the configuration from APIGW routing table for promo code service api",
+       "Check the shop portal logs and see if  anything logs captured for promo code flow.",
+       "Enable the trace in shop and capure the Promo code apigw call RR and provide to your ESB team to check further."
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "MYA Appointments Loading issue",
+  "Functionality": "MYA Appointments",
+  "Area": "Mybell",
+  "LOB": "MYA Appointments Loading issue",
+  "Resolutions": [
+    {
+      "DueTo": "MYA Appointments Loading issue",
+      "TriagingSteps": [
+       "Try checking Appointment Service in DTM/Dynatrace",
+       "Try to reproduce in any other valid environments and see if the flow is working or issue is reproducible?",
+       "Check if we are connected with correct Oneside backend (S1BTE or S2BTE)",
+       "Verify with ESB team if we are connected to the right Oneside backend (as mentioned in SS farm) or not? If not, ask them make necessary corrections",
+       "Confirm with TCOE/Requester if the tokens provided are from right environment (S1BTE or S2BTE)",
+       "If steps 1,2,3, 4 & 5 are as expected, try reproducing the issue by enabling the dev tool and check response of Appointment Services Api ",
+       "If nothing found in DTM/Dynatrace verify logs of Appointment Service Api in SG server",
+       "Still no luck, enable fiddler for Appointment Services Api and capture R&R",
+       "In case of any issue with response of Appointment Services Api, pass R&R to ESB team to create ticket"
+                 ]
+    }
+  ]
+},
+{
+  "IssueName": "Mybell Virtual Repair Issue",
+  "Functionality": "Mybell Virtual Repair",
+  "Area": "Mybell",
+  "LOB": "Mybell Virtual Repair Issue",
+  "Resolutions": [
+    {
+      "DueTo": "Mybell Virtual Repair Issue",
+      "TriagingSteps": [
+       "Check in DTM/Dynatrace and see if anything can be traceble",
+       "If nothing can be traceble in DTM then check which call is failing or throwing the error as response in Dev tool",
+       "Based on results from Dev tool try to check the Logs on that service and see if anything can be useful to tackle the issue.",
+       "Try to enable trace and check each call response and see if anything is getting failed.if found anything then inform our ESB team to raise either UTS or ALM with respective teams.",
+       "try reproducing the same issue in previous release and if this works there then compare the Mybell content between these and also ask our ESB team to cross verify the configs with Previous releases if anything got missed." 
+                 ]
+    }
+  ]
+}
+]

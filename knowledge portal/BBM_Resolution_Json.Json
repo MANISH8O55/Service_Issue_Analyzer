@@ -1,0 +1,185 @@
+[
+  {
+    "IssueName": "Mcorp Unable to Login",
+    "Functionality": "BBM Login",
+    "Area": "BSSP",
+    "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Unable to login",
+        "TriagingSteps": [
+          "Try to reproduce the issue with diffrent creds and see if that works or not.",
+          "Try to check in dev tool and see if any issue with recaptcha.",
+          "Try to check in dev tool and see if any API calls are failing or throwing error response.",
+          "Verify the Logs for failed calls in dev tool.",
+          "If nothing is failing in dev then check logs for BSSP root application and see if anything can be reported for backends.",
+          "Ask TCOE teams and get confirmtaion about the data seeding.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      },
+	  {
+        "DueTo": "Error while loading the BSSP login url",
+        "TriagingSteps": [
+          "if you are getting 404 error for all content files then check if deployment properly done in the BBM environment or not.",
+          "if you are getting 500 error then try to validate the IIS with Another working slot.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP Overview Page Loading Error",
+    "Functionality": "BBM Selfserve Overview",
+    "Area": "BSSP",
+     "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Overview Page Loading Error",
+        "TriagingSteps": [
+          "Try to reproduce the issue with diffrent creds and see if that works or not.",
+          "Try to check in dev tool and see if any API calls are failing or thworing error response.",
+          "Verify the Logs for failed calls in dev tool.",
+          "If nothing is failing in dev then check logs for BSSP root application and see if anything can be reported for backends.",
+          "Ask TCOE teams and get confirmtaion about the data seeding.",
+          "CHeck in DTM and see if anything can be traceble.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+
+
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP Shop Landing Page Loading error",
+    "Functionality": "BBM Shop",
+    "Area": "BBM Shop",
+    "LOB": "BBM Shop",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Shop Landing Page Loading error",
+        "TriagingSteps": [
+         "if you are getting 404 error for all content files then check if deployment properly done in the BBM environment or not.",
+         "if you are getting 500 error then try to validate the IIS with Another working slot.",
+         "Check logs for BBM shop and see if any logs related to LMS or any other backends.",
+         "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP Shop Address Qualification error",
+    "Functionality": "BBM Shop",
+    "Area": "BBM Shop",
+    "LOB": "BBM Shop",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Shop Address Qualification error",
+        "TriagingSteps": [
+         "Try to reproduce the issue with diffrent Address.",
+         "Check if recaptcha enabled in Browser or not. for qualification recaptcha should be enabled.",
+         "Check with ESB team and get confirmation about the LMS service. LMS should up and running for any qualification flows.",
+         "Check logs for BBM shop and see if any logs related to LMS , EOM ProductQualification and  any other backends.",
+         "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP Registration error",
+    "Functionality": "BBM Registration",
+    "Area": "BSSP",
+    "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Registration error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue with diffrent data if possible.",
+          "Check if recaptcha enabled in Browser or not. for registration recaptcha should be enabled.",
+          "Check logs for BBM root logs and see if any logs related to any backends.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP forgot password error",
+    "Functionality": "BBM Forgot Password",
+    "Area": "BSSP",
+    "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP forgot password error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue with diffrent data if possible.",
+          "Check if recaptcha enabled in Browser or not. for forgot password recaptcha should be enabled.",
+          "Check logs for BBM root logs and see if any logs related to any backends.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP office 365 loading error",
+    "Functionality": "BBM Office 365",
+    "Area": "BSSP",
+    "LOB": "BBM Shop",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP office 365 loading error",
+        "TriagingSteps": [
+          "If you are getting 404 error for all content files then check if deployment properly done in the BBM shop 365 environment or not.",
+          "If you are getting 500 error then try to validate the IIS with Another working slot.",
+          "Check logs for BBM shop 365 and see if any logs related to LMS or any other backends."
+        ]
+      },
+	  {
+        "DueTo": "BSSP office 365 qualification error",
+        "TriagingSteps": [
+          "Try to reproduce the issue with diffrent Address.",
+          "Check if recaptcha enabled in Browser or not. for qualification recaptcha should be enabled.",
+          "Check with ESB team and get confirmation about the LMS service. LMS should up and running for any qualification flows.",
+          "Check logs for BBM shop and see if any logs related to LMS , EOM ProductQualification and  any other backends.",
+          "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP Billing error",
+    "Functionality": "BBM Billing",
+    "Area": "BSSP",
+    "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP Billing error",
+        "TriagingSteps": [
+             "Check with TCOE team and get confirmation about IDR backend secured or not.",
+             "if IDR backend is not secure then reject the defect.",
+             "if it is secured then try to check for logs and provide those Logs to TCOE and ask them to check with IDR backends.",
+             "Most of time this Testcase will get deffered to Soak or Prod."
+          ]
+      }
+    ]
+  },
+  {
+    "IssueName": "BSSP CASL Page loading error",
+    "Functionality": "BBM CASL",
+    "Area": "BSSP",
+    "LOB": "BBM Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "BSSP CASL Page loading error",
+        "TriagingSteps": [
+           "Please test the flow with your Belldev creds and this should work with your belldev creds.",
+           "TCOE sometime wont use proper creds to test this flow.",
+           "If you are geeting issue post login then try to check in logs and see if anything can be traceble.",
+           "Based on logs if you suspect it could be code issue then engage our CCA with proper Logs."
+
+          ]
+      }
+    ]
+  }
+ ]
+  

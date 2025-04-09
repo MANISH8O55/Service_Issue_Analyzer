@@ -1,0 +1,221 @@
+[{
+  "IssueName": "Unable to Login (BRS)",
+  "Functionality": "BRS Login",
+  "Area": "Mybell",
+  "LOB": "Bell Mobility Postpaid",
+  "Resolutions": [
+    {
+      "DueTo": "Username & Password error during login",
+      "TriagingSteps": [
+        "Check the data and ensure its seeded in proper backend",
+        "Check the siteminder connectivity",
+        "Check BRS connectivity",
+        "check NM1 connectivity"
+      ]
+    },
+    {
+      "DueTo": "Throwing 500 error on clicking on login",
+      "TriagingSteps": [
+        "Ensure LDAP connectivity is there  ",
+        "Ensure The code and content deployed properly",
+        "Ensure backend connected properly"
+      ]
+    },
+    {
+      "DueTo": "Issue with login",
+      "TriagingSteps": [
+        "Not available"
+      ]
+    }
+  ]
+},{
+  "IssueName": "Unable to Login (Mobility)",
+  "Functionality": "Mobility Login",
+  "Area": "Mybell",
+  "LOB": "Bell Mobility Postpaid",
+  "Resolutions": [
+    {
+      "DueTo": "Getting 401 error after login to Mybell Application",
+      "TriagingSteps": [
+        "Check & ensure code and content are deployed properly in Servers.",
+        "Check if one of the Load Balanced server is misbehaving as code & content is missing in the faulty server.",
+        "Stop IIS in one of the servers and redirect traffic to other server and observe the login functionality. Do the same exercise for other server as well and ensure both servers are responding properly.",
+        "Check Event viewer and observe if any suspicious errors in application/system logs. Check if the login credentials are proper & appropriate permission is given to the files/folders in server."
+      ]
+    },
+    {
+      "DueTo": "Getting 403 error after login to Mybell Application",
+      "TriagingSteps": [
+        "Check and ensure both WFE servers are responding properly and the code and content are in sync.",
+        "Check and ensure if fiddler proxy is enabled in the config file in any of the WFE server",
+        "Check and ensure both config files matches between 2 WFE servers",
+        "Stop IIS in one of the servers and redirect traffic to other server and observe the login functionality. Do the same exercise for other server as well and ensure both servers are responding properly.",
+        "Check Event viewer and observe if any suspicious errors in application/system logs.",
+        "Check the Permission on the Root folder and ensure the permission inherits to the child folders. if any missing permission found, then remediate it by referring to a working server. Check if application pool is down in any of the WFE server for the specific application/site."
+      ]
+    },
+    {
+      "DueTo": "Mybell Mobility login getting error as \"This page is not working\"",
+      "TriagingSteps": [
+        "Check and ensure appropriate NM1 backend (secured for the Release) is configured in ESB.",
+        "Check and ensure the NM1 backend is Up & responding properly from ESB instance.",
+        "Check if any code changes done by some project in the login area which impact the login functionality.",
+        "Check application logs and observe if any suspicious errors are reported.",
+        "Check the event viewer \"system/application\" log and observe if any security cipher related issues reported.",
+        "Try checking the login flow with some other data.",
+        "Try running fiddler and capture the failing services/operations if possible."
+      ]
+    },
+    {
+      "DueTo": "Getting 500 Error in accessing Mybell Application/URL",
+      "TriagingSteps": [
+        "Check the System Event Viewer \"system/application\" logs and observe for any Site Minder related errors.",
+        "Try telnet to Site Minder Policy Server and ensure the Policy Server is reachable. If found issues with Policy Server, reach out to Site Minder team to fix the issue.",
+        "Check & ensure both WFE Servers are responding properly. Locate the faulty server in the Farm if any & fix the issue.",
+        "Check for any Security Cipher related changes which impact the login page."
+      ]
+    },
+    {
+      "DueTo": "Getting \"Link an account issue\" during Mybell/Virgin/Lucky/Solo Mobility Login",
+      "TriagingSteps": [
+        "Check & Ensure the data used for testing is properly seeded in the appropriate NM1 backend.",
+        "Check and ensure proper NM1 backend is configured/connected from ESB instance.",
+        "Check and ensure the NM1 system is up and responding. Try send sample R/R payload from ESB and observe the response.",
+        "Check if any NM1 scheduled/unscheduled maintenance is going at that time during the testing happened which cause the login issue."
+      ]
+    },
+    {
+      "DueTo": "Getting 500 Error in accessing Virgin Application/URL",
+      "TriagingSteps": [
+        "Check the System Event Viewer \"system/application\" logs and observe for any Site Minder related errors.",
+        "Try telnet to Site Minder Policy Server and ensure the Policy Server is reachable. If found issues with Policy Server, reach out to Site Minder team to fix the issue.",
+        "Check & ensure both WFE Servers are responding properly. Locate the faulty server in the Farm if any & fix the issue.",
+        "Check for any Security Cipher related changes which impact the login page."
+      ]
+    },
+    {
+      "DueTo": "Getting \"Link an account issue\" during Virgin",
+      "TriagingSteps": [
+        "Check & Ensure the data used for testing is properly seeded in the appropriate NM1 backend.",
+        "Check and ensure proper NM1 backend is configured/connected from ESB instance.",
+        "Check and ensure the NM1 system is up and responding. Try send sample R/R payload from ESB and observe the response.",
+        "Check if any NM1 scheduled/unscheduled maintenance is going at that time during the testing happened which cause the login issue."
+      ]
+    },
+    {
+      "DueTo": "Virgin Mobility login getting error as \"This page is not working\"",
+      "TriagingSteps": [
+        "Check and ensure appropriate NM1 backend (secured for the Release) is configured in ESB.",
+        "Check and ensure the NM1 backend is Up & responding properly from ESB instance.",
+        "Check if any code changes done by some project in the login area which impact the login functionality.",
+        "Check application logs and observe if any suspicious errors are reported.",
+        "Check the event viewer \"system/application\" log and observe if any security cipher related issues reported.",
+        "Try checking the login flow with some other data.",
+        "Try running fiddler and capture the failing services/operations if possible."
+      ]
+    },
+    {
+      "DueTo": "Virgin Mobility login getting error as \"503 Service Unavailable error\"",
+      "TriagingSteps": [
+        "Check and ensure the sit.int.virginplus.ca site is accessible. if error coming from Virgin Mobile system then reach out to Virgin team & ask them to fix the issue"
+      ]
+    },
+    {
+      "DueTo": "Virgin Mobility login \"Getting Oops error after given the login credentials\"",
+      "TriagingSteps": [
+        "Check and ensure the data used for login is proper. Try using some other data to validate the login.",
+        "Check and ensure the Data seeded with single subscriber. Multiple subscriber data usually throwing login error.",
+        "Check for any code changes in login area which impacted the login flow."
+      ]
+    },
+    {
+      "DueTo": "Virgin Mobility login \"Getting Oops error after given the login credentials\"",
+      "TriagingSteps": [
+        "Check if sit virginplus system is having some issues.",
+        "Check for any siteminder misconfiguration related to cookies."
+      ]
+    }
+  ]
+},{
+  "IssueName": "Mobility HUG flow Error",
+  "Functionality": "Mobiluty HUG",
+  "Area": "Mybell",
+  "LOB": "Bell Mobility Postpaid",
+  "Resolutions": [
+    {
+      "DueTo": "Mybell Mobility (postpaid) HUG order issue",
+      "TriagingSteps": [
+        "Check and ensure appropriate NM1 backend (secured for the Release) is configured in ESB.",
+        "Check and ensure the NM1 backend is Up & responding properly from ESB instance.",
+        "Check if appropriate data used for the HUG order testing. Try using some other valid data for testing.",
+        "Check for any code changes from project for this area."
+      ]
+    },
+    {
+      "DueTo": "Mybell Mobility (postpaid) HUG order issue \"Technical difficulties in Listing page HUG Flow\"",
+      "TriagingSteps": [
+        "Check the PDM code and content and ensure the PDM content are deployed properly in both WFE servers.",
+        "Check for PDM application (Catalogue, translation, Solution) and ensure they are responding.",
+        "Check PDM application config file and ensure the appropriate config keys are deployed.",
+        "Check for the API GW logs and ensure the SG is responding properly. Check the logs of Service Account & Ordering service in SG.",
+        "Try executing fiddler proxy and capture any failure backend services/operations."
+      ]
+    }
+  ]
+},{
+  "IssueName": "Shop Address Qualification issue",
+  "Functionality": "Shop Mobility",
+  "Area": "Bell Shop",
+  "LOB": "Bell Shop",
+  "Resolutions": [
+    {
+      "DueTo": "Shop Address Qualification error",
+      "TriagingSteps": [
+        "Check and ensure the address used for qualification is appropriate for that backend. Try validate the address qualification with some different address.",
+        "Check and ensure OMF/LMS backend is up and responding. Try sending sample R/R payload from ESB and ensure a response from BRS backend.",
+        "Check and ensure proper BRS ELF is configured in ESB instance.",
+        "Try capture the failing services/operations from Fiddler and create an ALM ticket for BRS if needed.",
+        "Check for any code changes from any project in shop area which may impact the qualification flow.",
+        "If its a BRS release check if any BRS schema changes impact the flow as the corresponding DCX changes has not been taken care."
+      ]
+    }
+  ]
+},{
+  "IssueName": "Mcorp Unable to Login",
+  "Functionality": "Mcorp Login",
+  "Area": "Mcorp",
+  "LOB": "Corporate Selfserve",
+  "Resolutions": [
+    {
+      "DueTo": "Mcorp High Risk Login error",
+      "TriagingSteps": [
+        "Check & Validate appropriate NM1 backend configured in ESB.",
+        "Check and ensure NM1 backend is up & responding.",
+        "Check the Google captcha threshold and ensure the threshold should be configured to 0.1 in Login.xml file (C:\\sites\\BLT1\\MCORP\\Live\\Content\\GlobalResources\\Login.xml)"
+      ]
+    }
+  ]
+},{
+  "IssueName": "Mobility Overview Page Loading Error",
+  "Functionality": "Mobility Link Account",
+  "Area": "Mybell",
+  "LOB": "Bell Mobility Postpaid",
+  "Resolutions": [
+    {
+      "DueTo": "Unlink issue in Mybell",
+      "TriagingSteps": [
+        "Could Nm1 Backends are down. Please check with ESB team",
+        "Code compilations issue",
+        "May be Data is not seeded properly or TCOE testing with wrong Data.  ",
+        "Try with different Data which are available in TFS ticketing tool",
+        "Customer profile might not throwing errors in the response . Onebill or Mobility section is missed in response"
+      ]
+    },
+    {
+      "DueTo": "xyz",
+      "TriagingSteps": [
+        "Not available"
+      ]
+    }
+  ]
+}]

@@ -1,0 +1,83 @@
+[
+ 
+   
+  {
+    "IssueName": "Lucky Shop Overview error",
+    "Functionality": "Lucky Shop Overview",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop Overview",
+    "Resolutions": [
+      {
+        "DueTo": "Technical difficulites on load the page",
+        "TriagingSteps": [
+		  
+          "Try to reproduce the issue and see if this flow working intermintently",
+		  "if the flow is working intermintently then check Dev tool and see on which server the flow is getting failed",
+		  "Try to copy the web config and content from working server and try to reproduce the issue and if flow works fine then inform our TFS team about this and ask them to verify if anything failed in Builds",
+          "if issue is throughout then Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug.",
+		  "Try to check the trace using DTM/Dynatrace and see if anything can be traceble."
+          
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Lucky Shop SIM & Phones error",
+    "Functionality": "Lucky Shop SIM & Phones",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop SIM & Phones",
+    "Resolutions": [
+      {
+        "DueTo": "Technical difficulites on load the page",
+        "TriagingSteps": [
+		  
+          "Try to reproduce the issue and see if this flow working intermintently",
+		  "if the flow is working intermintently then check Dev tool and see on which server the flow is getting failed",
+		  "Try to copy the web config and content from working server and try to reproduce the issue and if flow works fine then inform our TFS team about this and ask them to verify if anything failed in Builds",
+		 "Try to check the trace using DTM/Dynatrace and see if anything can be traceble.",
+          "if issue is throughout then Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+          
+        ]
+      }
+    ]
+  },
+   {
+    "IssueName": "Lucky Shop Plans & Add-Ons",
+    "Functionality": "Lucky Shop Plans & Add-Ons",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop SIM & Phones",
+    "Resolutions": [
+      {
+        "DueTo": "Technical difficulites on load the page",
+        "TriagingSteps": [
+		  
+          "Try to reproduce the issue and see if this flow working intermintently",
+		  "if the flow is working intermintently then check Dev tool and see on which server the flow is getting failed",
+		  "Try to copy the web config and content from working server and try to reproduce the issue and if flow works fine then inform our TFS team about this and ask them to verify if anything failed in Builds",
+		  "Try to check the trace using DTM/Dynatrace and see if anything can be traceble.",
+          "if issue is throughout then Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Lucky Shop Mobility error",
+    "Functionality": "Lucky Shop Mobility",
+    "Area": "Lucky Shop",
+    "LOB": "Lucky Shop Mobility",
+    "Resolutions": [
+      {
+        "DueTo": "Technical difficulites on load the page",
+        "TriagingSteps": [
+		  
+          "Try to reproduce the issue and see if this flow working intermintently",
+		  "if the flow is working intermintently then check Dev tool and see on which server the flow is getting failed",
+		  "Try to copy the web config and content(PDM) from working server and try to reproduce the issue and if flow works fine then inform our TFS team about this and ask them to verify if anything failed in Builds",
+		 "Try to check the trace using DTM/Dynatrace and see if anything can be traceble.",
+          "if issue is throughout then Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+          
+        ]
+      }
+    ]
+  }
+  ]

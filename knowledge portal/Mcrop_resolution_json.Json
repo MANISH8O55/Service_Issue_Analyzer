@@ -1,0 +1,162 @@
+[
+  {
+    "IssueName": "Mcorp Unable to Login",
+    "Functionality": "Mcorp Login",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Unable to Login",
+        "TriagingSteps": [
+          "Please verify if the given creds valid or not. Try to login with any other data availabel in TFS tool.",
+          "Please check if recaptcha service is having any issues. usually login wont happen if any issue with Recaptcha. We can verify this in Console or in Network tab in Dev tool.",
+          "If you see any issue with recaptcha then please wait untill recaptcha issue get fixed. this is google captcha and PRT wonthave any control over it.",
+          "If we are not getting issues with Creds or recaptch then check in dev tool and see which API is throwing error or giving errors as response.",
+          "please check Logs for APi calls which failing in Dev tool and provide Logs to ESB team to raise UTS.",
+          "please check in DTM if DTM enabled for Mcrop"
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp NAG Landing page error",
+    "Functionality": "Mcorp Corporate Selfserve Overview",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp NAG Landing page error",
+        "TriagingSteps": [
+          "We verify if the given creds seeded in proper allocated backend or not.",
+          "If data seeded in correct backend then please check in dev tool. check if any API or calls are failing in dev tool.",
+          "verify Logs for failed calls in dev tool and provide the Logs to ESB to raise UTS with Nm1.",
+          "if no calls are failing in dev tool then verify the logs in both WFE and SG.",
+          "Please check in DTM if DTM enabled for Mcrop."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp Registration & Recovery Error",
+    "Functionality": "Mcorp Registration",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Registration & Recovery Error",
+        "TriagingSteps": [
+         "We verify if the given creds seeded in proper allocated backend or not.",
+         "Please verify if 'Key Contact Email' is valid or not. this should valid.",
+         "If data seeded in correct backend then please check in dev tool. check if any checkIdentity APi or any APis  are failing in dev tool.",
+         "Verify Logs for failed calls in dev tool and provide the Logs to ESB to raise UTS with Nm1.",
+         "if no calls are failing in dev tool then verify the logs in both WFE and SG.",
+         "Please check in DTM if DTM enabled for Mcrop."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mobility Change Feature flow error",
+    "Functionality": "Mobility Change Feature",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mobility Change Feature flow error",
+        "TriagingSteps": [
+          "Try to Reproduce the issue and see was there any API(ordering or Service account)failing in Dev tool.",
+          "If API's are failing with CORS errors then try to check the server health and try reseting the IIS and SOSS cache. this should fix the Cors issue.",
+          "Check in DTM/Dynatrace and search if anything can be traceable. ",
+          "If any service or api is failing then check application Logs for the failed API in respective servers.",
+          "If nothing found in DTM or Logs then capture Fiddler trace and provide the failed Trace to ESB team to raise the UTS defects with nm1 team.",
+          "Check logs for Application and see if you suspect any issue with code or content. Take CCA team help and provide the Changeset details to TCOE team to raise the ITDCX bug."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp Download Invoice Error",
+    "Functionality": "Mcorp download invoice",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Download Invoice Error",
+        "TriagingSteps": [
+          "Try to reproduce the issue and  check in dev tool. check if any API or calls are failing in dev tool.",
+          "Check the logs in failed API and verify if Logs reported for Bill images Nm1 calls.",
+          "First we need to ensure if the bill images are present in Nm1 backend. To download any Invoice we need to have its assiciated bill image in Backend.",
+          "Provide the failed RR to ESB team raise the UTS with Nm1 team."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "CCE Notification Failure",
+    "Functionality": "CCE Notification",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "CCE Notification Failure",
+        "TriagingSteps": [
+          "First verifiy with Sathya Or Nag if the CCE secured for current release or not.",
+          "If CCE backend is secured then ask our ESB team to verify if CCE configuration are properly configured or not.",
+          "Once ESB team Confirmed about CCE backend then request them enable the trace. Once they enabled the trace try to reproduce the issue.",
+          "ESB will get the EHS calls and they will check with CCE backend."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp Make a Payment error",
+    "Functionality": "Mcorp Make a Payment",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Make a Payment error",
+        "TriagingSteps": [
+          "Please check is there any outage with DTS or GPS backends.",
+          "Try to reproduce the issue and  check in dev tool. check if any API or calls are failing in dev tool.",
+          "Check the logs in failed API and verify if Logs reported for payment related calls.",
+          "Try to check with Diffrent Credit card details .",
+          "Try the flow with diffrent Data and see if this issue still reproducble with diffrent data. most of the time this flows works fine when we test with diffrent card or diffrent Data."
+        ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp Add/Remove Features Loading error",
+    "Functionality": "Mcorp Add/Remove Features",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Add/Remove Features Loading error",
+        "TriagingSteps": [
+         " Try to reproduce the issue and  check in dev tool. check if any API or calls are failing in dev tool.",
+          "Check the logs in failed API and verify if Logs reported for Nm1 calls.",
+          "Try the flow with diffrent Data and see if this issue still reproducble with diffrent data. most of the time this flows works fine when we test with diffrent Data."
+          ]
+      }
+    ]
+  },
+  {
+    "IssueName": "Mcorp Subscriber Account loading error",
+    "Functionality": "Mcorp Subscriber Account",
+    "Area": "Mcorp",
+    "LOB": "Corporate Selfserve",
+    "Resolutions": [
+      {
+        "DueTo": "Mcorp Subscriber Account loading error",
+        "TriagingSteps": [
+         "Try to reproduce the issue and  check in dev tool. check if any API(account/Subscribers) or calls are failing in dev tool.",
+         "Check the logs in failed API and verify if Logs reported for Nm1 calls.",
+         "Try the flow with diffrent Data and see if this issue still reproducble with diffrent data. most of the time this flows works fine when we test with diffrent Data."
+          ]
+      }
+    ]
+  }
+ ]
+  

@@ -5,16 +5,14 @@ import os
 # Page settings
 st.set_page_config(layout="wide", page_title="My Bell Issue Analyzer")
 
-# Load JSON data
-@st.cache_data
-def load_json():
-    file_path = os.path.join("knowledge portal", "Mybell_Resolutions.json")
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception as e:
-        st.error(f"Failed to load JSON: {e}")
+# Load JSON data from file
+def load_data():
+    json_file_path = "knowledge portal/Mybell_Resolutions.json"
+    if not os.path.exists(json_file_path):
+        st.error(f"File not found: {json_file_path}")
         return []
+    with open(json_file_path, "r", encoding="utf-8") as file:
+        return json.load(file)
 
 # Check if query matches anywhere in the issue (exact or partial)
 def matches_query(issue, query):

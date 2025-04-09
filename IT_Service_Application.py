@@ -57,10 +57,10 @@ if query:
 
             with col1:
                 st.markdown(f"### 📄 Result ---- {idx}")
-                st.markdown(f"**Issue:** {issue['IssueName']}")
-                st.markdown(f"**Functionality:** {issue.get('Functionality', '')}")
-                st.markdown(f"**Area:** {issue.get('Area', '')}")
-                st.markdown(f"**LOB:** {issue.get('LOB', '')}")
+                st.markdown(f"`Issue:` {issue['IssueName']}")
+                st.markdown(f"`Functionality:` {issue.get('Functionality', '')}")
+                st.markdown(f"`Area:` {issue.get('Area', '')}")
+                st.markdown(f"`LOB:` {issue.get('LOB', '')}")
 
             with col_div1:
                 st.divider()
@@ -68,7 +68,7 @@ if query:
             with col2:
                 st.markdown("### 🎫 Related Tickets")
                 for i, res in enumerate(issue.get("Resolutions", [])):
-                    st.markdown(f"- INC-{1000 + i}: {res.get('DueTo', '')}")
+                    st.markdown(f"`INC-{1000 + i}`: {res.get('DueTo', '')}")
 
             with col_div2:
                 st.divider()
@@ -76,7 +76,7 @@ if query:
             with col3:
                 st.subheader("🛠️ Resolution")
                 for resolution in issue.get("Resolutions", []):
-                    with st.expander(f"Due To: {resolution.get('DueTo', '')}"):
+                    with st.expander(f"`Due To:` {resolution.get('DueTo', '')}"):
                         st.markdown("**Triaging Steps:**")
                         for step in resolution.get("TriagingSteps", []):
                             st.write(f"- {step}")

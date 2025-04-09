@@ -6,15 +6,17 @@ import os
 st.set_page_config(layout="wide", page_title="My Bell Issue Analyzer")
 
 # Load JSON data
-def load_data():
-    json_file_path = r"Mybell_Resolutions.json"
-    if not os.path.exists(json_file_path):
-        st.error(f"File not found: {json_file_path}")
+@st.cache_data
+def load_json():
+    file_path = os.path.join("knowledge portal", "Mybell_Resolutions.json")
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        st.error(f"Failed to load JSON: {e}")
         return []
-    with open(json_file_path, "r", encoding="utf-8") as file:
-        return json.load(file)
 
-data = load_data()
+data = load_json()
 
 # Header
 st.markdown("## 🔍 My Bell Issue Analyzer")
